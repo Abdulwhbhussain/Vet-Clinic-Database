@@ -55,3 +55,6 @@ select species, min(weight_kg) as Minimun, max(weight_kg) as Maximum from animal
 GROUP BY species;
 SELECT species, AVG(escape_attempts) FROM animals 
 WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+
+CREATE TABLE owners(id INT GENERATED ALWAYS AS IDENTITY, full_name VARCHAR(250), age INT, PRIMARY KEY (id));
+CREATE TABLE species(id INT GENERATED ALWAYS AS IDENTITY, name VARCHAR(250), PRIMARY KEY (id));
